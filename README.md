@@ -64,3 +64,67 @@ tds115-proyecto9-suavizado/
 
 ## Licencia y atribución
 Atribuir los datos a Open-Meteo y sus fuentes meteorológicas conforme a las condiciones de uso publicadas. Conservar la versión y fecha de descarga cuando se obtenga el archivo.
+---
+
+## FASE 2 — SIMULACIÓN Y COMPARACIÓN DE FILTROS DIGITALES
+
+### Descripción
+
+Se implementó en Python con SciPy un comparador de tres filtros
+digitales para el suavizado de señales de temperatura:
+
+- Media móvil de 5 muestras.
+- Filtro IIR de primer orden (α = 0.35).
+- Filtro FIR de 7 coeficientes con ventana Hamming.
+
+La simulación utiliza 336 muestras de temperatura y ruido gaussiano
+artificial de desviación estándar de 0.6 °C, con semilla 115.
+
+### Código Python
+
+[Consultar el código de la Fase 2](comparador_fase2.py)
+
+### Gráficas de simulación
+
+#### Figura 1. Temperatura de referencia y señal con ruido
+
+![Temperatura con ruido](fig1_entrada.png)
+
+#### Figura 2. Comparación de los filtros digitales
+
+![Comparación de filtros](fig2_filtros.png)
+
+#### Figura 3. Respuesta al escalón y retardo de detección
+
+![Respuesta al escalón](fig3_escalon.png)
+
+#### Figura 4. Reducción porcentual del ruido
+
+![Reducción del ruido](fig4_reduccion.png)
+
+### Resultados
+
+Los filtros se evalúan mediante dos indicadores:
+
+1. Reducción porcentual del ruido residual mediante RMS.
+2. Retardo de detección frente a un escalón de temperatura.
+
+[Consultar resultados numéricos](resultados/resultados_comparativos.csv)
+
+### Artículo IEEE
+
+El artículo técnico de la Fase 2 documenta los fundamentos
+matemáticos, el estado del arte, la metodología y los resultados
+de la simulación.
+
+### Observaciones
+
+Los registros históricos de Open-Meteo corresponden a estimaciones
+meteorológicas y no a mediciones directas de un sensor físico.
+
+El ruido se incorpora artificialmente para evaluar la capacidad
+de los filtros digitales.
+
+El proyecto no constituye una calibración física de sensores.
+
+---
