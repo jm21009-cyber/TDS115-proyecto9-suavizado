@@ -80,9 +80,7 @@ digitales para el suavizado de señales de temperatura:
 La simulación utiliza 336 muestras de temperatura y ruido gaussiano
 artificial de desviación estándar de 0.6 °C, con semilla 115.
 
-### Código Python
 
-[Consultar el código de la Fase 2](comparador_fase2.py)
 
 ### Gráficas de simulación
 
@@ -111,11 +109,24 @@ Los filtros se evalúan mediante dos indicadores:
 
 [Consultar resultados numéricos](resultados/resultados_comparativos.csv)
 
-### Artículo IEEE
+## ARTÍCULO IEEE — FASE 2
 
-El artículo técnico de la Fase 2 documenta los fundamentos
-matemáticos, el estado del arte, la metodología y los resultados
-de la simulación.
+### Comparador de suavizado para sensores de temperatura
+
+El artículo técnico de la Fase 2 presenta los fundamentos
+teóricos, el estado del arte, la metodología y la simulación
+de tres filtros digitales: media móvil, IIR y FIR.
+
+### Documento IEEE
+
+📄 **[VER Y DESCARGAR ARTÍCULO IEEE — FASE 2](FASE_02_TDS.pdf)**
+
+### Implementación en Python
+
+💻 **[VER CÓDIGO DE SIMULACIÓN](comparador_fase2.py)**
+
+El proyecto utiliza Python y SciPy para comparar la reducción
+del ruido y el retardo de detección en señales de temperatura.
 
 ### Observaciones
 
