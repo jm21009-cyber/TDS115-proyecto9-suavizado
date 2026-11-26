@@ -1,0 +1,4 @@
+DEMOSTRACIÓN SINTÉTICA, NO Open-Meteo
+La cuantificación de 12 bits es un modelo virtual opcional, NO la resolución original de ERA5.
+FIR: corte 0.125 ciclos/h (propuesta fase 2, no definido en fase 1).
+RMS: excluidas las primeras 20 muestras para reducir efectos de inicialización.
